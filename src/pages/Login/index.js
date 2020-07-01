@@ -1,25 +1,25 @@
 import React from 'react'
 import './styles.css'
+import { Link } from 'react-router-dom'
 
-import logo from '../../img/logo.png'
+import HeaderFull from '../../components/HeaderFull'
 
 const Login = () => {
   return(
   <>  
-    <header className="header">
-      <img src={logo} alt="Logo"/>
-    </header>
+    <HeaderFull />
 
     <div class="login">
 			<div class="container">
         <div className="grid-7">
-          <h2>Olá! Digite o seu e-mail ou usuário</h2>
+          <h2>Entre com a sua conta</h2>
           <form action="link" method="POST">
-            <input id="assunto" placeholder="Digite o email" type="text" />
-            <input id="email" placeholder="Digite a senha" type="password" />
+            <input className="input-login" id="email" placeholder="Email ou Usuário" type="text" />
+            <input className="input-login" id="senha" placeholder="Senha" type="password" />
 
-            <input type="submit" name="Submit" class="btn-primary" value="Continuar" />
-            <input type="submit" name="Submit" class="btn-secondary" value="Criar conta" />
+            <input className="input-login" type="submit" name="Submit" class="btn-primary" value="Continuar" />
+            <Link to="/register" className="btn-secondary">Criar conta</Link>
+
           </form>        
         </div>
 			</div>
