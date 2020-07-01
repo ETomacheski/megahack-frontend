@@ -5,3 +5,36 @@ body {
     -webkit-font-smoothing: antialiased;
     font: 400 14px Roboto, sans-serif;
 }
+
+textarea:focus, input:focus, select:focus {
+	outline: 0;
+} 
+
+.btn-primary{
+    background-color: #3483fa;
+    border-radius: 8px;
+    color: #f5f5f0;
+    padding: 10px 0 10px 0;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover{
+    background-color: #225199;
+}
+
+.btn-secondary{
+    background-color: #fff;
+    border-style: none;
+    color: #3483fa;
+    padding: 10px 0 10px 0;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover{
+    background-color: #e6f0ff;
+    border-radius: 8px;
+}
