@@ -11,7 +11,7 @@ const Login = () => {
 
     <div class="login">
 			<div class="container">
-        <div className="grid-7">
+        <div className="container-login grid-7">
           <h2>Entre com a sua conta</h2>
           <form action="link" method="POST">
             <input className="input-login" id="email" placeholder="Email ou Usuário" type="text" />

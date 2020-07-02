@@ -8,18 +8,24 @@
   width: 100%;
 }
 
-.btn-primary{
-  width: 100%;
+.btn-register{
+  display: block;
+  width: 42.9%;
   margin-top: 30px;
+}
+
+.btn-register-out{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-secondary{
   display: block;
   text-align: center;
-  width: 100%;
   margin-top: 10px;
 }
-.container div{
+.container-registro{
   background-color: white;
   border-radius: 8px;
   padding: 50px 50px 30px 50px;
@@ -38,7 +44,7 @@
   top: 10%;
 }
 
-.registro div h2{
+.container-registro h2{
   font-size: 24px;
   color: #2e2e2e;
   font-weight: bold;

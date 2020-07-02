@@ -1,0 +1,26 @@
+/*Estilo para tablets*/
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+.form-register .grid-7{
+    width: 95%;
+}
+
+} /* Final do estilo para tablets */
+
+/*Estilo para smartphone*/
+@media only screen and (max-width: 767px) {
+.input-registro{
+    width: 65%;
+}
+
+.btn-register-out{
+  display: block;
+
+}
+
+.btn-register{
+  width: 65%;
+}
+
+
+} /* Final do estilo para smartphone */

@@ -10,6 +10,10 @@ textarea:focus, input:focus, select:focus, button {
 	outline: 0;
 } 
 
+a{
+    text-decoration: none;
+}
+
 .btn-primary{
     background-color: #3483fa;
     border-radius: 8px;
