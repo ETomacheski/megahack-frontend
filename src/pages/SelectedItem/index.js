@@ -3,9 +3,13 @@ import './styles.css'
 
 import image from '../../img/lolla.jpg'
 
+import HeaderFull from '../../components/HeaderFull'
+
 const SelectedItem = () =>{
   return(
   <>  
+    <HeaderFull />
+
     <section class="produtos container">
       <div className="produtos-container">
           <ul class="produtos_lista">
