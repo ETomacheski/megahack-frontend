@@ -1,6 +1,6 @@
 import React from 'react'
 import './styles.css'
-
+import './responsivo.css'
 import image from '../../img/lolla.jpg'
 
 import HeaderFull from '../../components/HeaderFull'
@@ -18,7 +18,6 @@ const SelectedItem = () =>{
                 <img src={image} alt="Bikcraft Passeio" />
               </div>
             </li>
-
             <li class="grid-8">
               <h1>Ingresso Lollapalooza</h1>
               <h2>R$200,00</h2>

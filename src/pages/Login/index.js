@@ -19,7 +19,6 @@ const Login = () => {
 
             <input className="input-login" type="submit" name="Submit" class="btn-primary" value="Continuar" />
             <Link to="/register" className="btn-secondary">Criar conta</Link>
-
           </form>        
         </div>
 			</div>

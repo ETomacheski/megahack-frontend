@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import SelectedItem from './pages/SelectedItem'
+import Profile from './pages/Profile'
 
 const Routes = () => {
   return(
@@ -13,6 +14,7 @@ const Routes = () => {
       <Route component={Login} path="/login" />
       <Route component={Register} path="/register" />
       <Route component={SelectedItem} path="/item" />
+      <Route component={Profile} path="/profile" />
     </BrowserRouter>
   )
 }

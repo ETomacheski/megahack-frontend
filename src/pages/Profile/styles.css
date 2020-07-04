@@ -1,0 +1,134 @@
+body
+{
+  margin: 0;
+}
+.header
+{
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100px;
+ background:#f55625;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+}
+.tickets-container
+{
+  padding-top: 20px;
+  background-color: #fff;
+  border-radius: 8px; 
+    border-bottom: 2px solid #EBEBEB;
+}
+.tickets
+{
+  padding: 100px 0;
+  z-index: 100;
+}
+
+.tickets_lista li
+{
+	background: #fff;
+  text-align: left;
+}
+
+.tickets_lista li img
+{
+  padding-left: 0px;
+  padding-top: 10px;
+}
+
+.tickets_lista li h1
+{
+	font-weight: bold;
+	font-size: 24px;
+  line-height: 25px;
+  padding-top: 0px;
+  margin-top: 10px;
+  color: black;
+}
+
+.tickets_lista li h2
+{
+	font-size: 24px;
+	line-height: 25px;
+	margin-top: 20px;
+}
+
+.tickets_lista li h6
+{
+  font-size: 15px;
+  color: #848484;
+}
+
+.tickets_lista li p
+{
+  padding-top: 10px;
+  line-height: 1.5em;
+  text-align: justify;
+}
+
+.btn
+{
+  width: 50%;
+  padding-right: 0px;
+  margin-right: auto;
+}
+
+.tickets_icone img
+{
+  width: 100%;
+	height: 100%;
+}
+.call1
+{
+	padding-top: 15px;
+	text-align: center;
+	clear: both;
+}
+
+.pesquisa-container
+{
+  padding-top: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+.pesquisa
+{
+  padding-top: 120px;
+  z-index: 100;
+}
+
+.pesquisa_lista li
+{
+	background: #fff;
+  text-align: left;
+}
+.pesquisa_lista li p
+{
+  padding-top: 10px;
+  line-height: 1.5em;
+  text-align: justify;
+}
+
+.btn
+{
+  width: 50%;
+  padding-right: 0px;
+  margin-right: auto;
+}
+.pesquisa_icone input
+{
+  border: 0.5px solid #EBEBEB;
+  border-radius: 8px;
+  width: 95%;
+  height: 50px;
+}
+.select-form
+{
+  width: 95%;
+  height: 50px;
+  border-radius: 8px;
+  border: 0.5px solid #EBEBEB;
+}
