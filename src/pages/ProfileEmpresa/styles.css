@@ -1,0 +1,72 @@
+body
+{
+  margin: 0;
+}
+button
+{
+  text-align: center;
+}
+.header-profile
+{
+ position: absolute;
+ top: 0;
+ left: 0;
+ background:#f55625;
+ width: 100%;
+}
+.header-profile img
+{
+  width: 300px;
+	height: 100px;
+}
+.btn3
+{
+    padding-top: 40px;
+}
+.input-vender {
+  height: 50px;
+  color: #333;
+  border: 0px solid;
+  border-bottom: 1px solid lightgrey;
+  display: table;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.btn-primary{
+  width: 100%;
+  margin-top: 30px;
+}
+
+.btn-secondary{
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.container .container-vender{
+  background-color: white;
+  border-radius: 8px;
+  padding: 50px 50px 30px 50px;
+}
+
+.vender .container{
+  display: flex;
+  justify-content: center;
+}
+
+.vender{
+	width: 100%;
+  position: absolute;
+  padding: 150px 0;
+  z-index: 100;
+  top: 10%;
+}
+
+.container-vender h2{
+  font-size: 24px;
+  color: #2e2e2e;
+  font-weight: bold;
+  line-height: 1.2em;
+  margin-bottom: 20px;
+}

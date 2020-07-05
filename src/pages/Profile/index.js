@@ -72,7 +72,7 @@ const Profile = () =>{
               <h2>R$200,00</h2>
               <p>DATA DO EVENTO: 21/10/2020</p>
               <p>QUANTIDADE DE INGRESSOS DISPONÍVEIS: 10</p>  
-              <div className="btn-register-out grid-14">
+              <div className="btn-register-out grid-10">
 	          	<button to = "/item" type="submit" name="Submit" class="btn-primary btn">MAIS INFORMAÇÕES</button>
 	            </div>          
               </li>
@@ -92,7 +92,7 @@ const Profile = () =>{
               <h2>R$200,00</h2>
               <p>DATA DO EVENTO: 21/10/2020</p>
               <p>QUANTIDADE DE INGRESSOS DISPONÍVEIS: 10</p>  
-              <div className="btn-register-out grid-14">
+              <div className="btn-register-out grid-10">
 	          	<button to = "/item" class="btn-primary btn">MAIS INFORMAÇÕES</button>
 	            </div>          
               </li>
@@ -112,7 +112,7 @@ const Profile = () =>{
               <h2>R$200,00</h2>
               <p>DATA DO EVENTO: 21/10/2020</p>
               <p>QUANTIDADE DE INGRESSOS DISPONÍVEIS: 10</p>  
-              <div className="btn-register-out grid-14">
+              <div className="btn-register-out grid-10">
 	          	<button type="submit" name="Submit" class="btn-primary btn">MAIS INFORMAÇÕES</button>
 	            </div>          
               </li>

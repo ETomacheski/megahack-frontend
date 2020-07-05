@@ -9,6 +9,8 @@ import RegisterEmpresa from './pages/RegisterEmpresa'
 import SelectedItem from './pages/SelectedItem'
 import Profile from './pages/Profile'
 import ProfileTickets from './pages/ProfileTickets'
+import ProfileTicketsEmpresa from './pages/ProfileTicketsEmpresa'
+import ProfileEmpresa from './pages/ProfileEmpresa'
 
 
 const Routes = () => {
@@ -22,6 +24,8 @@ const Routes = () => {
       <Route component={SelectedItem} path="/item"/>
       <Route component={Profile} path="/profile" />
       <Route component={ProfileTickets} path="/profile_tickets" />
+      <Route component={ProfileEmpresa} path="/profile_empresa" />
+      <Route component={ProfileTicketsEmpresa} path="/profile_ticketsempresa" />
     </BrowserRouter>
   )
 }
