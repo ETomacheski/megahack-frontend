@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './styles.css'
 
-import image from '../../img/lolla.jpg'
+import image from '../../img/ticket1.jpg'
 import axios from 'axios'
 import './responsivo.css'
 import logo from '../../img/logo.png'

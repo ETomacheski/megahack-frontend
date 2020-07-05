@@ -3,7 +3,7 @@ import { Link, useHistory } from 'react-router-dom'
 import { FiShoppingBag, FiArrowLeft} from 'react-icons/fi'
 import './styles.css'
 
-import image from '../../img/lolla.jpg'
+import image from '../../img/ticket1.jpg'
 import './responsivo.css'
 import logo from '../../img/logo.png'
 
@@ -30,11 +30,18 @@ const Profile = () =>{
     }  
   getTickets()  
     },[])
-  function handleGoToItem (id)
-  {
-    //history.push (`/item/${id}`)
-    history.push('/item/', {id})
+  async function handleGoToItem (id){
+    try {
+      const response = await axios({
+        method: 'post',
+        url: `https://mega-hack-api.herokuapp.com/buyTicket/${id}`,
+      })
+      alert("Ticket comprado! Verifique seu Email.")
+    } catch (error) {
+      console.log("Houve um erro no processamento, tente mais tarde.")
+    }
   }
+ 
 
   return(
   <>  
@@ -45,7 +52,7 @@ const Profile = () =>{
 				</Link>
 				<nav className="grid-12 header-profile-menu">
 					<ul>
-						<li><Link to="/"><FiShoppingBag style={{marginRight: 5}}/>Meus Tickets</Link></li>
+						<li><Link to="/profile_tickets"><FiShoppingBag style={{marginRight: 5}}/>Meus Tickets</Link></li>
 						<li><Link to="/"><FiArrowLeft style={{marginRight: 5}}/>Sair</Link></li>
 					</ul>
 				</nav>
@@ -62,7 +69,7 @@ const Profile = () =>{
               <ul className="tickets_lista">
                 <li className="grid-4">
                   <div className="tickets_icone">
-                    <img src={image} alt="Ingresso"/>
+                    <img src={`${image}`} alt="Ingresso"/>
                     </div>
                 </li>
                 <li className="grid-12">
@@ -70,7 +77,7 @@ const Profile = () =>{
                   <h2>R$ {ticket.price}</h2>
                   <p>{ticket.description}</p> 
                   <div className="btn-register-out grid-10">
-                    <button onClick = {()=>handleGoToItem(ticket.id)} type="submit" name="Submit" class="btn-primary btn">Mais Informações</button>
+                    <button onClick = {()=>handleGoToItem(ticket.id)} type="submit" name="Submit" class="btn-primary btn">Comprar</button>
                   </div>            
                 </li>
               </ul> 

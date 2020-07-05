@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles.css'
 
-import image from '../../img/lolla.jpg'
+import image from '../../img/ticket1.jpg'
 //import search from './search.png'
 import './responsivo.css'
 import logo from '../../img/logo.png'
