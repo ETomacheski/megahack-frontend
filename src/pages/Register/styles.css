@@ -10,7 +10,7 @@
 
 .btn-register{
   display: block;
-  width: 42.9%;
+  width: 42.9% !important;
   margin-top: 30px;
 }
 

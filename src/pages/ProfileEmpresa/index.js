@@ -7,20 +7,24 @@ import './responsivo.css'
 import logo from '../../img/logo.png'
 import { Link } from 'react-router-dom'
 
+import {FiArrowLeft, FiShoppingBag, FiShoppingCart} from 'react-icons/fi'
+
 const ProfileEmpresa = () =>{
   return(
   <>  
-    <header class = "header-profile">
-    	<div class = "grid-8">
-      		<img src={logo} alt="Logo"/>
-    	</div>
-      <div className="grid-4 btn-register-out btn3">
-	        <Link to = "/profile_ticketsempresa" class="btn-secondary">MINHAS VENDAS</Link>
-	    </div>  
-      <div className="grid-4 btn3">
-	        <Link to = "/" class="btn-secondary">SAIR</Link>
-	    </div>  
-	</header>
+    <header className="header-profile">
+			<div className="container">
+				<Link to="/" class="grid-4">
+					<img src={logo} alt="Logo" />
+				</Link>
+				<nav className="grid-12 header-profile-menu">
+					<ul>
+						<li><Link to="/"><FiShoppingCart style={{marginRight: 5}}/>Meus Itens</Link></li>
+						<li><Link to="/"><FiArrowLeft style={{marginRight: 5}}/>Sair</Link></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
   <div class="vender">
 			<div class="container">
         <div className="container-vender grid-16">

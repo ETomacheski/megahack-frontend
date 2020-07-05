@@ -111,10 +111,10 @@ img
 	align-items: center;
   }
   
-  .btn-selected-item
+	.btn-selected-item
   {
 	text-align: center;
-	width: 50%;
+	width: 40% !important;
 	margin-top: 30px;
   }
   

@@ -21,15 +21,10 @@ button
 }
 .tickets-container
 {
-  padding-top: 10px;
+  margin-top: -160px;
   background-color: #fff;
   border-radius: 8px; 
   margin-bottom: 10px;
-}
-.tickets
-{
-  padding: 200px 0;
-  z-index: 100;
 }
 
 .tickets_lista li

@@ -1,38 +1,87 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './styles.css'
 import './responsivo.css'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
+
+import api from '../../services/api'
 
 import HeaderFull from '../../components/HeaderFull'
 
 const Register = () => {
+  
+  const history = useHistory()
+
+  const [password, setPassword] = useState('')
+  const [email, setEmail] = useState('')
+  const [name, setName] = useState('')
+  const [cpf, setCpf] = useState('')
+
+  async function handleCreateAccount(event){
+    event.preventDefault()
+    const data = {
+      name,
+      email,
+      password,
+      cpf
+    }
+    try {
+      const response = await api.post('users', {data})
+      
+      alert('Conta criada com sucesso.')
+      history.push('/login')
+    } catch (error) {
+      console.log(error)
+      console.log(data)
+      alert("Houve um erro ao criar a conta, tente novamente.")
+    }
+
+  }
+
+
+
   return(
   <>  
     <HeaderFull />
 
-    <div class="registro">
-			<div class="container">
+    <div className="registro">
+			<div className="container">
         <div className="container-registro grid-16">
           <h2>Cadastre-se</h2>
-          <form className="form-register" action="link" method="POST">
+          <form className="form-register" onSubmit={handleCreateAccount}>
             <div className="grid-7">
-              <input className="input-registro" id="name" placeholder="Nome Completo" type="text" />
+              <input className="input-registro"
+              placeholder="Digite seu Nome Completo"
+              type="text"
+              value={name}
+              onChange={event => setName(event.target.value)}/>
             </div>
 
             <div className="grid-7">
-              <input className="input-registro" id="cpf" placeholder="CPF" type="text" />
+              <input className="input-registro"
+              placeholder="Digite seu CPF"
+              type="text"
+              value={cpf}
+              onChange={event => setCpf(event.target.value)} />
             </div>
 
             <div className="grid-7">
-              <input className="input-registro" id="email" placeholder="Email" type="mail" />
+              <input className="input-registro"
+              placeholder="Digite seu Email"
+              type="email"
+              value={email}
+              onChange={event => setEmail(event.target.value)} />
             </div>
 
             <div className="grid-7">
-              <input className="input-registro" id="password" placeholder="Senha" type="password" />
+              <input className="input-registro"
+              placeholder="Digite sua Senha"
+              type="password"
+              value={password}
+              onChange={event => setPassword(event.target.value)}/>
             </div>
 
             <div className="btn-register-out grid-14">
-              <button type="submit" name="Submit" class="btn-primary btn-register">Continuar</button>
+              <button type="submit" name="Submit" className="btn-primary btn-register">Continuar</button>
             </div>
              
             <div className="btn-register-out grid-14">

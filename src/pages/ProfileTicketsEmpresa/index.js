@@ -7,72 +7,83 @@ import './responsivo.css'
 import logo from '../../img/logo.png'
 import { Link } from 'react-router-dom'
 
+import { FiDollarSign, FiArrowLeft } from 'react-icons/fi'
+
 const ProfileTicketsEmpresa = () =>{
   return(
-  <>  
-    <header class = "header-profile">
-    	<div class = "grid-8">
-      		<img src={logo} alt="Logo"/>
-    	</div>
-      <div className="grid-4 btn-register-out btn3">
-	        <button class="btn-secondary">VENDER</button>
-	    </div>  
-      <div className="grid-4 btn3">
-	        <Link to = "/" class="btn-secondary">SAIR</Link>
-	    </div>  
-	</header>
-    <section class="tickets container">
+    <>  
+    <header className="header-profile">
+			<div className="container">
+				<Link to="/" class="grid-4">
+					<img src={logo} alt="Logo" />
+				</Link>
+				<nav className="grid-12 header-profile-menu">
+					<ul>
+						<li><Link to="/"> <FiDollarSign style={{marginRight: 3}}/>Vender um Ticket</Link></li>
+						<li><Link to="/"><FiArrowLeft style={{marginRight: 5}}/>Sair</Link></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+    <section className="tickets container">
+    {/*{tickets.map(ticket => (
       <div className="tickets-container">
-          <ul class="tickets_lista">
-            <li class="grid-4">
-              <div class="tickets_icone">
+      <div className="call1">
+        </div>
+          <ul key={String(ticket.id)} className="tickets_lista">
+            <li className="grid-4">
+              <div className="tickets_icone">
                 <img src={image} alt="Ingresso"/>
               </div>
             </li>
-            <li class="grid-12">
-              <h1>Ingresso Lollapalooza</h1>
-              <h2>R$200,00</h2>
-              <p>DATA DO EVENTO: 21/10/2020</p> 
-              <p>QUANTIDADE DE INGRESSOS DISPONÍVEIS: 41</p>   
+            <li className="grid-12">
+              <h1>{ticket.name}t</h1>
+              <h2>R${ticket.price}</h2>
+              <p>DATA DO EVENTO: {ticket.date}</p>   
               </li>
           </ul> 
-        <div class="call1">
+        <div className="call1">
         </div>
         </div>
-        <div className="tickets-container">
-          <ul class="tickets_lista">
-            <li class="grid-4">
-              <div class="tickets_icone">
-                <img src={image} alt="Ingresso"/>
+    ))} */}
+
+    <div className="tickets-container">
+
+    <div className="list-item">
+      <ul className="tickets_lista">
+          <li className="grid-4">
+            <div className="tickets_icone">
+              <img src={image} alt="Ingresso"/>
               </div>
-            </li>
-            <li class="grid-12">
-              <h1>Ingresso Lollapalooza</h1>
-              <h2>R$200,00</h2>
-              <p>DATA DO EVENTO: 21/10/2020</p> 
-              <p>QUANTIDADE DE INGRESSOS DISPONÍVEIS: 41</p>  
-              </li>
-          </ul> 
-        <div class="call1">
-        </div>
-        </div>
-        <div className="tickets-container">
-          <ul class="tickets_lista">
-            <li class="grid-4">
-              <div class="tickets_icone">
-                <img src={image} alt="Ingresso"/>
+          </li>
+          <li className="grid-12">
+            <h1>nome evento</h1>
+            <h2>R$ 999</h2>
+            <p>DATA DO EVENTO: 12/12/2000</p>   
+          </li>
+        </ul> 
+        <div className="call1">
+      </div>
+    </div>  
+     
+
+      <div className="list-item">
+        <ul className="tickets_lista">
+          <li className="grid-4">
+            <div className="tickets_icone">
+              <img src={image} alt="Ingresso"/>
               </div>
-            </li>
-            <li class="grid-12">
-              <h1>Ingresso Lollapalooza</h1>
-              <h2>R$200,00</h2>
-              <p>DATA DO EVENTO: 21/10/2020</p>  
-              <p>QUANTIDADE DE INGRESSOS DISPONÍVEIS: 41</p> 
-              </li>
-          </ul> 
-        <div class="call1">
+          </li>
+          <li className="grid-12">
+            <h1>nome evento</h1>
+            <h2>R$ 999</h2>
+            <p>DATA DO EVENTO: 12/12/2000</p>   
+          </li>
+        </ul> 
+        <div className="call1">
         </div>
         </div>
+      </div>
     </section>
   </>
   )
