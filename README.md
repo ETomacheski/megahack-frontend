@@ -34,8 +34,6 @@ Somos uma plataforma que tem como objetivo agregar valor ao business do Mercado 
   - **Axios**
   - **React-Cookie**
 
-#### **Server** [NodeJS][node] + [TypeScript][typescript]
-
 #### Server NodeJS
 
   - **Express**
