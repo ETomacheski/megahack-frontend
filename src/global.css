@@ -13,6 +13,7 @@ textarea:focus, input:focus, select:focus, button {
 
 a{
     text-decoration: none;
+    display: block;
 }
 
 .btn-primary{

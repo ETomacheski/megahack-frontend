@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 import HeaderFull from '../../components/HeaderFull'
 
-const Register = () => {
+const RegisterEmpresa = () => {
   return(
   <>  
     <HeaderFull />
@@ -14,13 +14,13 @@ const Register = () => {
 			<div class="container">
         <div className="container-registro grid-16">
           <h2>Cadastre-se</h2>
-          <form className="form-register" action="link" method="POST">
+          <form className="form-register-empresa" action="link" method="POST">
             <div className="grid-7">
               <input className="input-registro" id="name" placeholder="Nome Completo" type="text" />
             </div>
 
             <div className="grid-7">
-              <input className="input-registro" id="cpf" placeholder="CPF" type="text" />
+              <input className="input-registro" id="cnpj" placeholder="CNPJ" type="text" />
             </div>
 
             <div className="grid-7">
@@ -34,12 +34,8 @@ const Register = () => {
             <div className="btn-register-out grid-14">
               <button type="submit" name="Submit" class="btn-primary btn-register">Continuar</button>
             </div>
-             
             <div className="btn-register-out grid-14">
-              <Link to="/register_empresa" className="btn-secondary btn-register">Cadastre sua empresa</Link>
-            </div>
-            <div className="btn-register-out grid-14">
-              <Link to="/" className="btn-secondary btn-register">Voltar</Link>
+              <Link to="/register" className="btn-secondary btn-register">Voltar</Link>
             </div>
           </form>        
         </div>
@@ -50,4 +46,4 @@ const Register = () => {
   )
 }
 
-export default Register
+export default RegisterEmpresa

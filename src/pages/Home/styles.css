@@ -9,10 +9,15 @@
 	left: 0;
 	width: 100%;
 	height: 100px;
-	background:#fff159;
+	background:#f55625;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+.header img
+{
+	width: 300px;
+	height: 100px;
 }
 .tokens
 {

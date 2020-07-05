@@ -26,12 +26,13 @@
     .tickets_icone img
     {
       margin-left: 0;
+      width: 100%;
     }
     .tickets_lista li
     {
         padding: 5px;
     } 
-    .pesquisa
+    .tickets
     {
       padding-top: 400px;
     }
