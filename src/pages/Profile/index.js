@@ -12,7 +12,7 @@ import axios from 'axios'
 
 const Profile = () =>{
 
- // const history = useHistory()
+  const history = useHistory()
 
   const [tickets, setTickets] = useState([])
 
@@ -24,12 +24,17 @@ const Profile = () =>{
           url: 'https://mega-hack-api.herokuapp.com/ticket',
         })
         setTickets(response.data)
+        console.log (response.data)
       } catch (error) {
       }
     }  
   getTickets()  
     },[])
-
+  function handleGoToItem (id)
+  {
+    //history.push (`/item/${id}`)
+    history.push('/item/', {id})
+  }
 
   return(
   <>  
@@ -65,7 +70,7 @@ const Profile = () =>{
                   <h2>R$ {ticket.price}</h2>
                   <p>{ticket.description}</p> 
                   <div className="btn-register-out grid-10">
-                    <Link to = "/item" type="submit" name="Submit" class="btn-primary btn">Mais Informações</Link>
+                    <button onClick = {()=>handleGoToItem(ticket.id)} type="submit" name="Submit" class="btn-primary btn">Mais Informações</button>
                   </div>            
                 </li>
               </ul> 
