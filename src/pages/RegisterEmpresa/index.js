@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import './styles.css'
 import './responsivo.css'
 import { Link, useHistory } from 'react-router-dom'
@@ -33,8 +33,8 @@ const RegisterEmpresa = () => {
       alert('Conta criada com sucesso.')
       history.push('/login_empresa')
     } catch (error) {
-      console.log(error)
-      console.log(data)
+      //console.log(error)
+// console.log(data)
       alert("Houve um erro ao criar a conta, tente novamente.")
     }
 

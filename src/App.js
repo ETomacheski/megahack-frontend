@@ -6,8 +6,6 @@ import './global.css'
 import './responsivo.css'
 
 
-
-
 import Routes from './routes'
 
 function App() {

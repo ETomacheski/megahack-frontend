@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './styles.css'
 import { Link, useHistory} from 'react-router-dom'
+import Cookies from 'universal-cookie'
 
 import axios from 'axios'
 
@@ -19,42 +20,20 @@ const Login = () => {
       password
     }
     try {
+      axios.defaults.withCredentials = true
       const response = await axios({
         method: 'post',
         url: 'https://mega-hack-api.herokuapp.com/userLogin',
         data
       })
-      const token = response.headers.auth
-      console.log(response)
-     // localStorage.setItem('auth', token)
+      const cookies = new Cookies();
+      cookies.set('auth', response.data.token, { path: '/' });
+      cookies.set('userEmail', response.data.email, { path: '/' });
 
-     // history.push('/profile_tickets')
+      history.push('/profile_tickets')
     } catch (error) {
-      alert("Email ou senha inválidos.")
+      alert("Falha no login.")
     }
-
-   {/* function callBeforeLogin(){
-      axios.interceptors.request.use(
-        config => {
-          const { origin } = new URL(config.url);
-          const allowedOrigins = [apiUrl];
-          const token = localStorage.getItem('token');
-          if (allowedOrigins.includes(origin)) {
-            config.headers.authorization = `Bearer ${token}`;
-          }
-          return config;
-        },
-        error => {
-          return Promise.reject(error);
-        }
-      );
-
-      const getJwt = async () => {
-        const { data } = await axios.get(`https://mega-hack-api.herokuapp.com/jwt`);
-        localStorage.setItem('token', data.token);
-        setJwt(data.token);
-      };
-    } */}
   }
   return(
   <>  

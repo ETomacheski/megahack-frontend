@@ -178,3 +178,7 @@ button
 {
   width: 40% !important;
 }
+
+.btn-register-out{
+  text-align: center;
+}

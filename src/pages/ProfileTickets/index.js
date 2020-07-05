@@ -10,8 +10,6 @@ import { Link, useParams } from 'react-router-dom'
 import {FiArrowLeft, FiShoppingCart} from 'react-icons/fi'
 
 const ProfileTickets = () =>{
-  const route = useParams()
-  const routeParams = route.params
 
   const [tickets, setTickets] = useState([])
 
@@ -22,9 +20,8 @@ const ProfileTickets = () =>{
         method: 'get',
         url: 'https://mega-hack-api.herokuapp.com/user',
       })
-     // console.log(response)
+      setTickets(response.data[0].tickets)
     } catch (error) {
-      //console.log(error)
     }
   }  
   getTickets()  
@@ -39,71 +36,36 @@ const ProfileTickets = () =>{
 				</Link>
 				<nav className="grid-12 header-profile-menu">
 					<ul>
-						<li><Link to="/"><FiShoppingCart style={{marginRight: 5}}/>Loja de Tickets</Link></li>
+						<li><Link to="/profile"><FiShoppingCart style={{marginRight: 5}}/>Loja de Tickets</Link></li>
 						<li><Link to="/"><FiArrowLeft style={{marginRight: 5}}/>Sair</Link></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
     <section className="tickets container">
-    {/*{tickets.map(ticket => (
-      <div className="tickets-container">
-      <div className="call1">
-        </div>
-          <ul key={String(ticket.id)} className="tickets_lista">
+      
+    <div className="tickets-container">
+
+    {tickets.map(ticket => (
+        <div className="list-item">
+          <ul className="tickets_lista">
             <li className="grid-4">
               <div className="tickets_icone">
                 <img src={image} alt="Ingresso"/>
-              </div>
+                </div>
             </li>
             <li className="grid-12">
-              <h1>{ticket.name}t</h1>
-              <h2>R${ticket.price}</h2>
-              <p>DATA DO EVENTO: {ticket.date}</p>   
-              </li>
+              <h1>{ticket.name}</h1>
+              <h2>R$ {ticket.price}</h2>
+              <p>{ticket.description}</p>   
+            </li>
           </ul> 
-        <div className="call1">
+          <div className="call1">
         </div>
-        </div>
-    ))} */}
-
-    <div className="tickets-container">
-
-    <div className="list-item">
-      <ul className="tickets_lista">
-          <li className="grid-4">
-            <div className="tickets_icone">
-              <img src={image} alt="Ingresso"/>
-              </div>
-          </li>
-          <li className="grid-12">
-            <h1>nome evento</h1>
-            <h2>R$ 999</h2>
-            <p>DATA DO EVENTO: 12/12/2000</p>   
-          </li>
-        </ul> 
-        <div className="call1">
-      </div>
-    </div>  
+      </div>  
+      ))}
      
-
-      <div className="list-item">
-        <ul className="tickets_lista">
-          <li className="grid-4">
-            <div className="tickets_icone">
-              <img src={image} alt="Ingresso"/>
-              </div>
-          </li>
-          <li className="grid-12">
-            <h1>nome evento</h1>
-            <h2>R$ 999</h2>
-            <p>DATA DO EVENTO: 12/12/2000</p>   
-          </li>
-        </ul> 
-        <div className="call1">
-        </div>
-        </div>
-      </div>
+    </div>
     </section>
   </>
   )

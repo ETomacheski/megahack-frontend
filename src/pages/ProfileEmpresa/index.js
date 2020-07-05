@@ -1,13 +1,11 @@
 import React from 'react'
 import './styles.css'
 
-//import image from '../../img/lolla.jpg'
-//import search from './search.png'
 import './responsivo.css'
 import logo from '../../img/logo.png'
 import { Link } from 'react-router-dom'
 
-import {FiArrowLeft, FiShoppingBag, FiShoppingCart} from 'react-icons/fi'
+import {FiArrowLeft, FiShoppingCart} from 'react-icons/fi'
 
 const ProfileEmpresa = () =>{
   return(
