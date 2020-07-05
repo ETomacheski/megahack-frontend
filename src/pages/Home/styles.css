@@ -113,6 +113,7 @@ img
   
   .btn-selected-item
   {
+	text-align: center;
 	width: 50%;
 	margin-top: 30px;
   }
@@ -130,12 +131,9 @@ img
   }
   
   
-  .call
-  {
-	  padding-top: 20px;
-	  text-align: center;
-	  clear: both;
-  }
+.call{
+	clear: both;
+}
 
   .call p
   {

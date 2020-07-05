@@ -33,13 +33,13 @@ const Home = () => {
 			  <p>Cadastre-se ou entre! para não perder nada!</p>
             </li>
 			<div class = "grid-16">
-			<div className="btn-selected-item-out">
-                <Link to = "/register" type="submit" name="Submit" class="btn-secondary btn-selected-item">CADASTRAR-SE</Link>
-              </div>
-			  <div className="btn-selected-item-out">
-                <Link to = "/login" type="submit" name="Submit" class="btn-secondary btn-selected-item">ENTRAR</Link>
-              </div>
-			</div>
+				<div className="btn-selected-item-out">
+          <Link to = "/login" type="submit" name="Submit" class="btn-primary btn-selected-item">ENTRAR</Link>
+        </div>
+				<div className="btn-selected-item-out">
+          <Link to = "/register" type="submit" name="Submit" class="btn-secondary btn-selected-item">CADASTRAR-SE</Link>
+        </div>
+				</div>
 		
           </ul> 
         <div class="call">
@@ -48,7 +48,7 @@ const Home = () => {
       </div>  
     </section>
 
-  		<section class="tokens">
+  	<section class="tokens">
 			<div class = "container">
 				<ul class="iconslist">
 					<li class="grid-1-4">
