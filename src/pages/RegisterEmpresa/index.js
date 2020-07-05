@@ -19,7 +19,7 @@ const RegisterEmpresa = () => {
   async function handleCreateCompanyAccount(event){
     event.preventDefault()
     const data = {
-      name,
+      corporate_name: name,
       email,
       password,
       cnpj,
@@ -27,7 +27,7 @@ const RegisterEmpresa = () => {
     try {
       const response = await axios({
         method: 'post',
-        url: 'https://mega-hack-api.herokuapp.com/user',
+        url: 'https://mega-hack-api.herokuapp.com/company',
         data
       })
       alert('Conta criada com sucesso.')

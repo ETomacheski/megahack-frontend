@@ -24,10 +24,37 @@ const Login = () => {
         url: 'https://mega-hack-api.herokuapp.com/userLogin',
         data
       })
-      history.push('/profile_tickets')
+      const token = response.headers.auth
+      console.log(response)
+     // localStorage.setItem('auth', token)
+
+     // history.push('/profile_tickets')
     } catch (error) {
       alert("Email ou senha inválidos.")
     }
+
+   {/* function callBeforeLogin(){
+      axios.interceptors.request.use(
+        config => {
+          const { origin } = new URL(config.url);
+          const allowedOrigins = [apiUrl];
+          const token = localStorage.getItem('token');
+          if (allowedOrigins.includes(origin)) {
+            config.headers.authorization = `Bearer ${token}`;
+          }
+          return config;
+        },
+        error => {
+          return Promise.reject(error);
+        }
+      );
+
+      const getJwt = async () => {
+        const { data } = await axios.get(`https://mega-hack-api.herokuapp.com/jwt`);
+        localStorage.setItem('token', data.token);
+        setJwt(data.token);
+      };
+    } */}
   }
   return(
   <>  

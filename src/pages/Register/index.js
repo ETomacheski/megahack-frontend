@@ -3,7 +3,7 @@ import './styles.css'
 import './responsivo.css'
 import { Link, useHistory } from 'react-router-dom'
 
-import api from '../../services/api'
+import axios from 'axios'
 
 import HeaderFull from '../../components/HeaderFull'
 
@@ -22,16 +22,17 @@ const Register = () => {
       name,
       email,
       password,
-      cpf
+      cpf,
     }
     try {
-      const response = await api.post('users', {data})
-      
+      const response = await axios({
+        method: 'post',
+        url: 'https://mega-hack-api.herokuapp.com/user',
+        data
+      })
       alert('Conta criada com sucesso.')
       history.push('/login')
     } catch (error) {
-      console.log(error)
-      console.log(data)
       alert("Houve um erro ao criar a conta, tente novamente.")
     }
 

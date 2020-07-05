@@ -16,19 +16,18 @@ const ProfileTickets = () =>{
   const [tickets, setTickets] = useState([])
 
   useEffect(() => {
-    async function getTickets(){
-      try {
-        const response = await axios({
-          method: 'get',
-          url: 'https://mega-hack-api.herokuapp.com/user',
-        })
-        setTickets(response.data[0].tickets)
-        console.log(response.data[0].tickets)
-      } catch (error) {
-        console.log(error) //retornando 403
-      }
-    }  
-      getTickets()
+  async function getTickets(){
+    try {
+      const response = await axios({
+        method: 'get',
+        url: 'https://mega-hack-api.herokuapp.com/user',
+      })
+     // console.log(response)
+    } catch (error) {
+      //console.log(error)
+    }
+  }  
+  getTickets()  
     },[])
 
   return(
