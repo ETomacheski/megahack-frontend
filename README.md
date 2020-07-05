@@ -57,7 +57,7 @@ Somos uma plataforma que tem como objetivo agregar valor ao business do Mercado 
 ### **Executando o Projeto**
 
 #### **:computer: Frontend**
-> 1. $cd frontend
+> 1. $cd megahack-frontend
 > 2. $npm install
 > 3. $npm start
 > 4. No seu navegador, acesse localhost:3000
