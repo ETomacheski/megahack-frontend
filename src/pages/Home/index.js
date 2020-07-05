@@ -13,31 +13,33 @@ import { Link } from 'react-router-dom'
 const Home = () => {
   return(
 	  <>
-	<header class = "header">
-    	<div>
-      		<img src={logo} alt="Logo"/>
-    	</div>	
-	</header>
+    <header className="header-profile">
+			<div className="container">
+				<Link to="/" class="grid-4">
+					<img src={logo} alt="Logo" />
+				</Link>
+			</div>
+		</header>
 		 <section class="box container">
       <div className="box-container">
           <ul class="box_lista">
             <li class="grid-8">
               <div class="box_icone">
-                <img src={imghome} alt="Bikcraft Passeio" />
+                <img src={imghome} alt="Tickets Trade" />
               </div>
             </li>
             <li class="grid-8">
               <h1>Mercado Tickets</h1>
               <p>Com o Mercado Tickets a distância entre você e seu evento preferido são de poucos cliques!</p>
-			  <p>Aqui você encontra de tudo: cinema, teatro, jogo de futebol, tem para todos os gostos!</p>
-			  <p>Cadastre-se ou entre! para não perder nada!</p>
+			  			<p>Aqui você encontra de tudo: cinema, teatro, jogos de futebol, têm para todos os gostos!</p>
+			  			<p>Entre ou cadastre-se agora e não perca tempo :)</p>
             </li>
 			<div class = "grid-16">
 				<div className="btn-selected-item-out">
-          <Link to = "/login" type="submit" name="Submit" class="btn-primary btn-selected-item">ENTRAR</Link>
+          <Link to = "/login" type="submit" name="Submit" class="btn-primary btn-selected-item">Entrar</Link>
         </div>
 				<div className="btn-selected-item-out">
-          <Link to = "/register" type="submit" name="Submit" class="btn-secondary btn-selected-item">CADASTRAR-SE</Link>
+          <Link to = "/register" type="submit" name="Submit" class="btn-secondary btn-selected-item">Crie sua conta</Link>
         </div>
 				</div>
 		

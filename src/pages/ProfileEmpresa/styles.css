@@ -70,3 +70,10 @@ button
   line-height: 1.2em;
   margin-bottom: 20px;
 }
+
+.btn-vender{
+  width: 50%;
+}
+.btn-vender-out{
+  text-align: center;
+}

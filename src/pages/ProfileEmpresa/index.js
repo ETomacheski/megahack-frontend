@@ -34,7 +34,12 @@ const ProfileEmpresa = () =>{
             <input className="input-vender" id="senha" placeholder="Nome do ingresso" type="text" />
             <input className="input-vender" id="senha" placeholder="Quantidade" type="number" />
             <input className="input-vender" id="senha" placeholder="Preço" type="number" />
-            <input className="input-vender" type="submit" name="Submit" class="btn-primary" value="VENDER"/>
+            <div className="btn-vender-out">
+              <input className="input-vender" type="submit"
+              name="Submit" class="btn-primary btn-vender"
+              value="Vender"/>
+            </div>
+           
           </form>        
         </div>
 			</div>
